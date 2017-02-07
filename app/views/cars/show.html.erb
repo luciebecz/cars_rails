@@ -1,0 +1,13 @@
+<h1> <%= @car.make_model %> </h1>
+
+<ul> 
+  <li>Year: <%= @car.year %> </li>
+  <li>Color: <%= @car.color %> </li>
+  <li>Runs: <%= @car.runs %> </li>
+  <li>
+    <%= link_to 'Edit', edit_car_path(@car) %>
+    <%= link_to 'Delete', car_path(@car), method: :delete %>
+  </li>
+</ul>
+
+<%= link_to 'All Cars', cars_path %>

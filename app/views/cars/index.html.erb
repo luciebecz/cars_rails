@@ -1,0 +1,17 @@
+<h1>All Cars</h1>
+
+<% if @cars.any? %>
+
+  <% @cars.each do |car| %>
+    <div>
+      <%= link_to car.info, car_path(car) %> <!--car because the rails routes requires an id-->
+    </div>
+  <% end %>
+
+<% else %>
+  <h3>No Cars Found, Please Create One!</h3>
+<% end %>
+
+<hr />
+<%= link_to 'New Car', new_car_path %>
+
